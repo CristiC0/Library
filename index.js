@@ -1,19 +1,37 @@
 var myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-Book.prototype.info = function () {
-    return this.title + " " + this.author + " " + this.pages + " " + this.read;
-};
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    info() {
+        return (
+            this.title + " " + this.author + " " + this.pages + " " + this.read
+        );
+    }
 
-Book.prototype.readSwitch = function () {
-    if (this.read == 1) this.read = 0;
-    else this.read = 1;
-};
+    readSwitch() {
+        if (this.read == 1) this.read = 0;
+        else this.read = 1;
+    }
+}
+// Book.prototype.info = function () {
+//     return this.title + " " + this.author + " " + this.pages + " " + this.read;
+// };
+
+// Book.prototype.readSwitch = function () {
+//     if (this.read == 1) this.read = 0;
+//     else this.read = 1;
+// };
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
