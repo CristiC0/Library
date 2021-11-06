@@ -1,0 +1,9 @@
+.card {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(143, 143, 143);
+}
+
+#form {
+    display: none;
+}
